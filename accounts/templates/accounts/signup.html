@@ -1,0 +1,52 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}signup{% endblock %}
+
+{% block content %}
+    <h2 class="my-4 text-center">signup</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <form method="POST" action="">
+                            {% csrf_token %}
+                            {% if error_message %}
+                            <div class="text-center text-danger">
+                                <h2>
+                                    {{ error_message }}
+                                </h2>
+                            </div>
+                            {% endif %}
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="username" name="username" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email"class="form-label">Email</label>
+                                <input type="email" id="email" name="email"  class="form-control" placeholder="Enter your email..." class="w-full p-2 border rounded">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="repeatPassword" class="form-label">Repeat Password</label>
+                                <input type="password" id="repeatPassword" name="repeatPassword" class="form-control" placeholder="Repeat your password..." class="w-full p-2 border rounded">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">signup</button>
+                        </form>
+                        <p class="mt-3 text-center">Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link external CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/accounts.css' %}">
+{% endblock %}

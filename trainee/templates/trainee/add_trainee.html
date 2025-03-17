@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Add Trainee{% endblock %}
+
+{% block content %}
+    <h2 class="my-4 text-center">Add Trainee</h2>
+
+    <div class="container">
+        <form action="#" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.as_p }}
+                
+            </div>
+            <button type="submit" class="btn btn-primary">Add Trainee</button>
+        </form>
+    </div>
+
+    <!-- Link external CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'trainee/css/trainee.css' %}">
+{% endblock %}

@@ -1,0 +1,116 @@
+:root {
+    --primary-color: #459d66;         /* Main green */
+    --primary-hover: #367d52;         /* Darker hover shade */
+    --light-grey: #f9f9f9;            /* Background color */
+    --text-color: #333;               /* Standard text */
+    --footer-bg: #459d66;             /* Footer background */
+    --footer-text: #ffffff;           /* Footer text */
+    --footer-link-hover: #c9e8d4;     /* Light hover for footer links */
+  }
+
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-grey);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Navbar styles */
+  nav {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  nav ul li {
+    display: flex;
+    align-items: center;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: var(--primary-hover);
+  }
+
+  /* Main content styling */
+  .content {
+    flex: 1;
+    padding: 40px 20px;
+  }
+
+  /* Footer styles */
+  footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+  }
+
+  footer a {
+    color: var(--footer-text);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+
+  footer a:hover {
+    color: var(--footer-link-hover);
+  }
+
+  /* Button styles (optional use) */
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-hover);
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }

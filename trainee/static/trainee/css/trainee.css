@@ -1,0 +1,132 @@
+
+
+/* home styles */
+
+:root {
+    --primary-color: #459d66;         /* Main green */
+    --primary-hover: #367d52;         /* Darker hover shade */
+    --light-grey: #f9f9f9;            /* Background color */
+    --text-color: #333;               /* Standard text */
+    --footer-bg: #459d66;             /* Footer background */
+    --footer-text: #ffffff;           /* Footer text */
+    --footer-link-hover: #c9e8d4;     /* Light hover for footer links */
+}
+
+/* Custom Hero Section */
+.hero {
+    background-color: #f8f9fa; /* Light background */
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero .btn-primary {
+    background-color: #459d66;
+    border-color: #459d66;
+  }
+  
+  .hero .btn-primary:hover {
+    background-color: #367d52;
+  }
+  
+  
+  /* Center table container */
+.table-container {
+    max-width: 80%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+/* Table Header */
+.styled-table thead {
+    background-color: var(--primary-color); /* Main green */
+    color: white;
+    text-align: left;
+}
+
+/* Styled Table */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Header Cells */
+.styled-table th, 
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternate Row Colors */
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey background for alternate rows */
+}
+
+/* Hover Effect */
+.styled-table tbody tr:hover {
+    background-color: var(--primary-hover); /* Darker hover shade */
+    transition: 0.3s;
+}
+
+/* ******************************************************* */
+/* ******************* add trainee ************************ */
+
+/* Center the form */
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style input fields */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the button */
+button {
+    width: 50%;
+    padding: 10px;
+    background-color: var(--primary-color); /* Main green button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: var(--primary-hover); /* Darker green on hover */
+}
