@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from . models import Courses
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 def course_list(request):
     courses = Courses.objects.filter(status=True)
@@ -14,7 +14,6 @@ def add_course(request):
         return render(request, 'courses/add_course.html', {'form': form})
     else:
         form = CoursesForm(request.POST, request.FILES)
-        # print(form.data)
         if form.is_valid():
             print(form.data)
             form.save()
